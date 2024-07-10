@@ -2055,3 +2055,74 @@
     width: 330px;
   }
 }
+
+.u-repeater {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.u-repeater-item {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, z-index 0s ease;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.expanded {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  transform: scale(1.05); /* Example: Scale up to cover the area */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow definition */
+  background-color: white; /* Ensure the background color fills the expanded area */
+  overflow: hidden;
+}
+
+/* Positioning for specific items */
+.expanded.top-left {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+
+.expanded.bottom-right {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+
+/* Additional styling for demo purposes */
+.u-repeater-item h4 {
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+}
+
+.service-details {
+  display: none;
+  padding: 10px;
+  text-align: center;
+}
+
+.expanded .service-details {
+  display: block;
+}
+
+.expanded .u-container-style {
+  height: 100%; /* Ensure the container fills the expanded area */
+}
+
+.u-repeater-item h4 {
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+}
+
+.service-details {
+  padding: 10px;
+  font-size: 16px; /* Default font size */
+}
