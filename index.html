@@ -466,26 +466,26 @@ He is also the best carpet cleaner in town! He takes care and does a great job. 
 				</div>
 				<div class="row">
 					<div class="col-lg-6 col-md-12 col-12">
-						<form class="form" action="#">
+						<form class="form" action="sendemail.php" method="post">
 							<div class="row">
 								<div class="col-lg-12 col-md-12 col-12">
 									<div class="form-group">
-										<input name="name" type="text" placeholder="Name">
+										<input name="name" id="name" type="text" placeholder="Name" required>
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-6 col-12">
 									<div class="form-group">
-										<input name="email" type="email" placeholder="Email">
+										<input name="email" id="email" type="email" placeholder="Email" required>
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-6 col-12">
 									<div class="form-group">
-										<input name="phone" type="text" placeholder="Phone">
+										<input name="phone" id="phone" type="text" placeholder="Phone" required>
 									</div>
 								</div>
 								<div class="col-lg-12 col-md-12 col-12">
 									<div class="form-group">
-										<textarea name="message" placeholder="Write Your Message Here....."></textarea>
+										<textarea name="message" id="message" placeholder="Write Your Message Here....." required></textarea>
 									</div>
 								</div>
 							</div>
